@@ -1,0 +1,98 @@
+http://www.sherweb.com/blog/how-to-automate-mysql-backups/
+12 Steps to Automate MySQL Backups | SherWeb
+by    Peter Viola  on  January 24, 2013
+
+While looking for a solution to automate the backups for our MySQL server, I found this great script that did exactly what I wanted.  The MySQL backup script I’m about to walk you through setting up is a great way to backup your MySQL databases on your Windows Cloud Server.  Having a backup solution for your MySQL database(s) is just as import as having one for a Microsoft SQL database.  I would like to thank Mathew Moeller who authored the MySQL backup script I’m about to cover.
+
+This backup solution will back up each MySQL database to an individual SQL file with the name of the database, todays date and time.  All of the SQL backup files are zipped to a central archive named FullBackup.”Date”.zip and then each individual SQL file gets deleted.  The script deletes the backup file after the amount of days you specify.  There is a dumperrors.txt file that tracks any errors during the backup process.
+
+The following steps will walk you through setting up a scheduled task that runs the script to backup your MySQL databases.   You will need to know the following things in order to implement the script.
+
+    MySQL root user password
+    Path to MySQL installation
+
+You can download the script from the link below, then follow the steps below to set it up on your Windows Cloud Server.
+
+http://www.redolivedesign.com/downloads/Auto-MySQL-Backup-Win-1.5.zip
+
+Quick Steps:
+
+    Extract the contents of the zip file you downloaded
+    Copy the folder MySQLBackups to the root of your C drive
+    Create a backup admin user (backupadmin) in MySQL and assign it the backupadmin role
+    Under Schema Privileges give the user SHOW VIEW rights to all the databases
+    Edit the mysqlbackup.bat file in the C:\MySHQLBackups folder
+    Add the backupadmin user credentials (line 33 and 36)
+    Make sure the error log path is correct in the file (line 39)
+    Make sure the MySQL data directory is listed correctly (line 42)
+    Make sure the path to the mysqldump.exe process is correct (line 53)
+    Line 67 reflects the amount of days before the backup archive is deleted
+    Update the drive letter or path for the remaining locations in the file if the folder location is not C:\MySQLBackups
+    Create a daily scheduled task to run the batch file
+
+
+Detailed Steps:
+
+    Extract the contents of the zip file you downloaded
+    Copy the folder MySQLBackups to the C drive
+    Next we need to create a user that will only have the backup role assigned as well as SHOW VIEW rights to all the databases.  The user credentials will be added to the script to run the process that creates the backups. 
+    Open the application MySQL Workbench 5.2 CE log in with the ‘root’ user and click on Mange Security.  You may need to install MySQL Workbench if it is missing.  It’s just a GUI to manage MySQL.  You could also do this through phpMyAdmin.
+
+[MySQL Workbench]
+
+    Click Add Account button and make the Login Name backupadmin
+    Enter a password for the user
+    Click the Administrative Roles tab and check the BackupAdmin role
+    Click Apply
+    Click the Schema Privileges tab, select the backupadmin user and click Add Entry button
+
+  [Schema Privileges - backupadmin]
+
+    Make sure Any Host (%) and Any Schema (%) is selected and click OK
+    Check the box beside SHOW VIEW and click the Save Changes button
+    Edit the mysqlbackup.bat file in the C:\MySHQLBackups folder and update the bold items listed below
+
+:: Name of the database user
+set dbuser=backupadmin
+
+:: Password for the database user
+set dbpass=EnterPassword
+
+:: Error log path
+set errorLogPath=”c:\MySQLBackups\backupfiles\dumperrors.txt”
+
+:: Switch to the data directory to enumerate the folders
+pushd “C:\ProgramData\MySQL\MySQL Server 5.1\data“
+
+echo “Pass each name to mysqldump.exe and output an individual .sql file for each”
+
+:: Thanks to Radek Dolezel for adding the support for dashes in the db name
+:: Added –routines thanks for the suggestion Angel
+
+FOR /D %%F IN (*) DO (
+IF NOT [%%F]==[performance_schema] (
+SET %%F=!%%F:@002d=-!
+“C:\Program Files\MySQL\MySQL Server 5.1\bin\mysqldump.exe” –user=%dbuser% –password=%dbpass% –databases –routines –log-error=%errorLogPath%  %%F > “c:\MySQLBackups\backupfiles\%%F.%backuptime%.sql”
+) ELSE (
+echo Skipping DB backup for performance_schema
+)
+)
+
+echo “Zipping all files ending in .sql in the folder”
+
+“c:\MySQLBackups\zip\7za.exe” a -tzip “c:\MySQLBackups\backupfiles\FullBackup.%backuptime%.zip”
+“c:\MySQLBackups\backupfiles\*.sql”
+
+echo “Deleting all the files ending in .sql only”
+
+del “c:\MySQLBackups\backupfiles\*.sql”
+
+echo “Deleting zip files older than 7 days now”
+Forfiles -p c:\MySQLBackups\backupfiles\ -s -m *.* -d –7 -c “cmd /c del /q @path”
+
+    Save your changes and create a daily scheduled task to run the batch file
+    Run the task to make sure it works.   Check c:\MySQLBackups\backupfiles for the database backup files
+
+And that completes the setup of your MySQL backup.  Now you can rest assured that you are safely backing up your database(s).
+
+Be sure to check out our blog for similar resources.
