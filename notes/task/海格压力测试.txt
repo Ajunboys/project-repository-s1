@@ -1,0 +1,2 @@
+$ msconfig -- 启动项 -- 取消 test1、test2计划任务(gif播放)、OA-IE自启动
+
