@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html ng-app="index" ng-controller="indexController" lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TITLE</title>
+        <!-- Utility libraries -->
+        <script type="text/javascript" src="lib/jquery/jquery.min.js?v=2.1.3"></script>
+        <script type="text/javascript" src="lib/lodash/lodash.min.js?v=2.4.1"></script>
+
+        <!-- AngularJS -->
+        <script type="text/javascript" src="lib/angular/angular.min.js?v=1.3.16"></script>
+        <script type="text/javascript" src="lib/angular/angular-cookies.min.js?v=1.3.16"></script>
+        <script type="text/javascript" src="lib/angular/angular-route.min.js?v=1.3.16"></script>
+        <script type="text/javascript" src="lib/angular/angular-touch.min.js?v=1.3.16"></script>
+
+        <!-- Internationalization -->
+        <script type="text/javascript" src="lib/messageformat/messageformat.min.js?v=1.0.2"></script>
+        <script type="text/javascript" src="lib/angular/angular-translate.min.js?v=2.8.0"></script>
+        <script type="text/javascript" src="lib/angular/angular-translate-interpolation-messageformat.min.js?v=2.8.0"></script>
+        <script type="text/javascript" src="lib/angular/angular-translate-loader-static-files.min.js?v=2.8.0"></script>
+
+        <!-- Polyfills for Blob and the FileSaver API -->
+        <script type="text/javascript" src="lib/blob-polyfill/Blob.js?v=1.0.20150320"></script>
+        <script type="text/javascript" src="lib/filesaver/FileSaver.min.js?v=1.3.3"></script>
+
+        <!-- Allow arbitrary ordering of Angular module creation and retrieval -->
+        <script type="text/javascript" src="lib/angular/angular-module-shim.js?v=0.0.4"></script>
+
+		
+		<link href="lib/bootstrap/css/bootstrap.min.css"  rel="stylesheet" media="screen">
+		
+		
+<!--		<link href="lib/bootstrap_/css/bootstrap-theme.min.css"  rel="stylesheet" media="screen">-->
+		
+		<link href="lib/bootstrap/css/bootstrap-responsive.min.css"  rel="stylesheet" media="screen">
+
+		<script src="lib/bootstrap_/js/bootstrap.min.js"></script>
+<style type="text/css">
+body {
+width: 100%;
+height: 100%;
+top:0px;
+bottom:0px;
+margin: 0px 0px;
+/*background: rgba(0, 98, 124, 0.9);	
+color:#ffffff;*/
+padding: 0px 0px;
+}
+
+body>div{
+padding:10px 12px;
+}
+body>div>img{
+width:140px;
+height:140px;
+}
+</style>
+</head>
+
+<body ng-app='routingDemoApp'>
+     
+        <ul>
+            <li><a href="#/">首页</a></li>
+            <li><a href="#/computers">电脑</a></li>
+            <li><a href="#/printers">打印机</a></li>
+            <li><a href="#/blabla">其他</a></li>
+        </ul>
+         
+        <div ng-view></div>
+
+        <script>
+            angular.module('routingDemoApp',['ngRoute'])
+            .config(['$routeProvider', function($routeProvider){
+                $routeProvider
+                .when('/',{template:'这是首页页面'})
+                .when('/computers',{template:'这是电脑分类页面'})
+                .when('/printers',{template:'这是打印机页面'})
+                .otherwise({redirectTo:'/'});
+            }]);
+        </script>
+     
+<div>
+    <p class="muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+    <p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+    <p class="text-error">Donec ullamcorper nulla non metus auctor fringilla.</p>
+    <p class="text-info">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.</p>
+    <p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+</div>
+    
+    <div>
+    <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr></p>
+    <p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr> is the best thing since sliced bread.</p>
+    </div>
+
+<div>
+    <address>
+      <strong>Twitter, Inc.</strong><br>
+      795 Folsom Ave, Suite 600<br>
+      San Francisco, CA 94107<br>
+      <abbr title="Phone">P:</abbr> (123) 456-7890
+    </address>
+     
+    <address>
+      <strong>Full Name</strong><br>
+      <a href="mailto:#">first.last@example.com</a>
+    </address>
+    
+    
+    <blockquote>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <small>Someone famous <cite title="Source Title">Source Title</cite></small>
+    </blockquote>
+    
+    <blockquote class="pull-right">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <small>Someone famous <cite title="Source Title">Source Title</cite></small>
+    </blockquote>
+</div>
+
+
+<div>
+	
+	<div>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</div>
+	
+	<div>
+	    <form>
+	      <fieldset>
+	        <legend>Legend</legend>
+	        <label>Label name</label>
+	        <input type="text" placeholder="Type something…">
+	        <span class="help-block">Example block-level help text here.</span>
+	        <label class="checkbox">
+	          <input type="checkbox"> Check me out
+	        </label>
+	        <button type="submit" class="btn">Submit</button>
+	      </fieldset>
+	    </form>
+	</div>
+	
+	<div>
+	    <form class="form-search">
+	      <input type="text" class="input-medium search-query">
+	      <button type="submit" class="btn">Search</button>
+	    </form>
+	</div>
+	
+	<div>
+	    <form class="form-inline">
+	      <input type="text" class="input-small" placeholder="Email">
+	      <input type="password" class="input-small" placeholder="Password">
+	      <label class="checkbox">
+	        <input type="checkbox"> Remember me
+	      </label>
+	      <button type="submit" class="btn">Sign in</button>
+	    </form>
+	</div>
+	
+	<div>
+	    <form class="form-horizontal">
+	      <div class="control-group">
+	        <label class="control-label" for="inputEmail">Email</label>
+	        <div class="controls">
+	          <input type="text" id="inputEmail" placeholder="Email">
+	        </div>
+	      </div>
+	      <div class="control-group">
+	        <label class="control-label" for="inputPassword">Password</label>
+	        <div class="controls">
+	          <input type="password" id="inputPassword" placeholder="Password">
+	        </div>
+	      </div>
+	      <div class="control-group">
+	        <div class="controls">
+	          <label class="checkbox">
+	            <input type="checkbox"> Remember me
+	          </label>
+	          <button type="submit" class="btn">Sign in</button>
+	        </div>
+	      </div>
+	    </form>
+	</div>
+	
+	
+	<div>
+	    <div>
+  		    <input type="text" placeholder="Text input">
+		</div>
+		
+		<div>
+		        <div class="input-append">
+			      <input class="span2" id="appendedDropdownButton" type="text">
+			      <div class="btn-group">
+			        <button class="btn dropdown-toggle" data-toggle="dropdown">
+			          Action
+			          <span class="caret"></span>
+			        </button>
+			        <ul class="dropdown-menu">
+			         <li>Action</li>
+			         <li>Add</li>
+			         <li>Delete</li>
+			         <li>Update</li>
+			        </ul>
+			      </div>
+			    </div>
+		</div>
+		
+		<div>
+		         <div class="input-prepend">
+				      <div class="btn-group">
+				        <button class="btn dropdown-toggle" data-toggle="dropdown">
+				          Action
+				          <span class="caret"></span>
+				        </button>
+				        <ul class="dropdown-menu">
+				         <li>Action</li>
+				         <li>Add</li>
+				         <li>Delete</li>
+				         <li>Update</li>
+				        </ul>
+				      </div>
+				      <input class="span2" id="prependedDropdownButton" type="text">
+				    </div>		
+		</div>
+		
+		<div>
+		    <input class="input-mini" type="text" placeholder=".input-mini">
+		    <input class="input-small" type="text" placeholder=".input-small">
+		    <input class="input-medium" type="text" placeholder=".input-medium">
+		    <input class="input-large" type="text" placeholder=".input-large">
+		    <input class="input-xlarge" type="text" placeholder=".input-xlarge">
+		    <input class="input-xxlarge" type="text" placeholder=".input-xxlarge">
+		    <span class="input-xlarge uneditable-input">Some value here</span>
+		</div>
+						
+	</div>
+
+
+</div>
+
+<div>
+	<div>
+	    <p>
+	      <button class="btn btn-large btn-primary" type="button">Large button</button>
+	      <button class="btn btn-large" type="button">Large button</button>
+	    </p>
+	    <p>
+	      <button class="btn btn-success" type="button">Default button</button>
+	      <button class="btn" type="button">Default button</button>
+	    </p>
+	    <p>
+	      <button class="btn btn-small btn-warning" type="button">Small button</button>
+	      <button class="btn btn-small" type="button">Small button</button>
+	    </p>
+	    <p>
+	      <button class="btn btn-mini btn-danger" type="button">Mini button</button>
+	      <button class="btn btn-mini" type="button">Mini button</button>
+	    </p>
+	    
+	</div>
+
+</div>
+    
+    <div>
+       <p>
+		   <button class="btn btn-large btn-block btn-primary" type="button">Block level button</button>
+	       <button class="btn btn-large btn-block" type="button">Block level button</button>
+       </p>
+    </div>
+    
+
+   <div>
+    <img src="images/123.gif" class="img-rounded">
+	<img src="images/22.jpg" class="img-circle">
+	<img src="images/55.jpg" class="img-polaroid">
+   </div>    
+   
+   <div>
+   
+   <button class="btn btn-mini btn-danger" type="button"><i class="icon-folder-open icon-white"></i>Mini button<i class="icon-search"></i></button>
+   
+       <div class="btn-toolbar">
+	      <div class="btn-group">
+	        <a class="btn" href="#"><i class="icon-align-left"></i></a>
+	        <a class="btn" href="#"><i class="icon-align-center"></i></a>
+	        <a class="btn" href="#"><i class="icon-align-right"></i></a>
+	        <a class="btn" href="#"><i class="icon-align-justify"></i></a>
+	      </div>
+	    </div>
+    
+    
+    
+          <div class="btn-group">
+		      <a class="btn btn-primary" href="#"><i class="icon-user icon-white"></i> User</a>
+		      <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+		      <ul class="dropdown-menu">
+		        <li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
+		        <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+		        <li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
+		        <li class="divider"></li>
+		        <li><a href="#"><i class="i"></i> Make admin</a></li>
+		      </ul>
+		    </div>
+		    
+		    
+		    
+		    <div>
+			    <a class="btn btn-large" href="#"><i class="icon-star"></i> Star</a>
+			    <a class="btn btn-small" href="#"><i class="icon-star"></i> Star</a>
+			    <a class="btn btn-mini" href="#"><i class="icon-star"></i> Star</a>
+		    </div>
+		    
+		    
+		    <div>
+		        <ul class="nav nav-list">
+			      <li class="active"><a href="#"><i class="icon-home icon-white"></i> Home</a></li>
+			      <li><a href="#"><i class="icon-book"></i> Library</a></li>
+			      <li><a href="#"><i class="icon-pencil"></i> Applications</a></li>
+			      <li><a href="#"><i class="i"></i> Misc</a></li>
+			    </ul>
+		    </div>
+		    
+		    
+		    <div>
+		        <div class="control-group">
+			      <label class="control-label" for="inputIcon">Username</label>
+			      <div class="controls">
+			        <div class="input-prepend">
+			          <span class="add-on"><i class="icon-user"></i></span>
+			          <input class="span2" id="inputUser" type="text">
+			        </div>
+			      </div>
+			    </div>
+		        <div class="control-group">
+			      <label class="control-label" for="inputIcon">Password</label>
+			      <div class="controls">
+			        <div class="input-prepend">
+			          <span class="add-on"><i class="icon-lock"></i></span>
+			          <input class="span2" id="inputPasswd" type="password">
+			        </div>
+			      </div>
+			    </div>
+		        <div class="control-group">
+			      <label class="control-label" for="inputIcon">Email address</label>
+			      <div class="controls">
+			        <div class="input-prepend">
+			          <span class="add-on"><i class="icon-envelope"></i></span>
+			          <input class="span2" id="inputIcon" type="text">
+			        </div>
+			      </div>
+			    </div>
+		    </div>
+		    
+		    
+		    
+   </div>
+    
+    
+    <div>
+	        <!-- Button to trigger modal -->
+		    <a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
+		     
+		    <!-- Modal -->
+		    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		        <h3 id="myModalLabel">Modal header</h3>
+		      </div>
+		      <div class="modal-body">
+		        <p>One fine body…</p>
+		      </div>
+		      <div class="modal-footer">
+		        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+		        <button class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div>
+    </div>
+    
+    <div>
+    	    <!-- Button to trigger modal -->
+		    <a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
+		     
+		    <!-- Modal -->
+		    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		        <h3 id="myModalLabel">Modal header</h3>
+		      </div>
+		      <div class="modal-body">
+              <h4>Text in a modal</h4>
+              <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem.</p>
+
+              <h4>Popover in a modal</h4>
+              <p>This <a href="#" role="button" class="btn popover-test" title="" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">button</a> should trigger a popover on click.</p>
+
+              <h4>Tooltips in a modal</h4>
+              <p><a href="#" class="tooltip-test" title="" data-original-title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="" data-original-title="Tooltip">that link</a> should have tooltips on hover.</p>
+
+              <hr>
+
+              <h4>Overflowing text to show optional scrollbar</h4>
+              <p>We set a fixed <code>max-height</code> on the <code>.modal-body</code>. Watch it overflow with all this extra lorem ipsum text we've included.</p>
+              <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+              <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+              <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+              <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+            </div>
+		      <div class="modal-footer">
+		        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+		        <button class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div>
+    </div>
+	
+	<div>
+		<div class="bs-docs-example">
+              <div id="myCarousel" class="carousel slide">
+                <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+                  <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+                  <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="item">
+                    <img src="images/123.gif" alt="">
+                    <div class="carousel-caption">
+                      <h4>First Thumbnail label</h4>
+                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="images/22.jpg" alt="">
+                    <div class="carousel-caption">
+                      <h4>Second Thumbnail label</h4>
+                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    </div>
+                  </div>
+                  <div class="item active">
+                    <img src="images/55.jpg" alt="">
+                    <div class="carousel-caption">
+                      <h4>Third Thumbnail label</h4>
+                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    </div>
+                  </div>
+                </div>
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+              </div>
+            </div>
+	</div>
+    
+    <script type="text/javascript">
+    $('body').off('.data-api')
+    </script>
+</body>
+</html>
