@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/orders
+END
+Text2Order.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/orders/Text2Order.java
+END
+Pen.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/orders/Pen.java
+END
+PatBltOrder.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/orders/PatBltOrder.java
+END
+LineOrder.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/orders/LineOrder.java
+END
+Brush.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/orders/Brush.java
+END
+BoundsOrder.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/orders/BoundsOrder.java
+END
+PolyLineOrder.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/orders/PolyLineOrder.java
+END
+Order.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/orders/Order.java
+END
+TriBltOrder.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/orders/TriBltOrder.java
+END
+MemBltOrder.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/orders/MemBltOrder.java
+END
+ScreenBltOrder.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/orders/ScreenBltOrder.java
+END
+DestBltOrder.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/orders/DestBltOrder.java
+END
+RectangleOrder.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/orders/RectangleOrder.java
+END
+DeskSaveOrder.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/orders/DeskSaveOrder.java
+END

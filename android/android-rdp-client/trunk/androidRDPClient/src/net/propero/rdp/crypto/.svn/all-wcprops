@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/crypto
+END
+MD5.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/crypto/MD5.java
+END
+Key.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/crypto/Key.java
+END
+RC4.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/crypto/RC4.java
+END
+SHA1.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/crypto/SHA1.java
+END
+CryptoException.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/crypto/CryptoException.java
+END
+BlockMessageDigest.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/crypto/BlockMessageDigest.java
+END

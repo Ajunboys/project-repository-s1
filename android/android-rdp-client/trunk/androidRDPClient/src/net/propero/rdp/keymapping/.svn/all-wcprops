@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/keymapping
+END
+KeyMapException.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/keymapping/KeyMapException.java
+END
+KeyCode.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/keymapping/KeyCode.java
+END

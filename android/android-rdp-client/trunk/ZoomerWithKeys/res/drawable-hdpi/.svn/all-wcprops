@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/7/trunk/ZoomerWithKeys/res/drawable-hdpi
+END
+btn_zoom_up_pressed.9.png
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/7/trunk/ZoomerWithKeys/res/drawable-hdpi/btn_zoom_up_pressed.9.png
+END
+btn_zoom_up_disabled.9.png
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/7/trunk/ZoomerWithKeys/res/drawable-hdpi/btn_zoom_up_disabled.9.png
+END
+btn_zoom_down_pressed.9.png
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/7/trunk/ZoomerWithKeys/res/drawable-hdpi/btn_zoom_down_pressed.9.png
+END
+btn_zoom_up_selected.9.png
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/7/trunk/ZoomerWithKeys/res/drawable-hdpi/btn_zoom_up_selected.9.png
+END
+btn_zoom_up_normal.9.png
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/7/trunk/ZoomerWithKeys/res/drawable-hdpi/btn_zoom_up_normal.9.png
+END
+btn_zoom_down_disabled.9.png
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/7/trunk/ZoomerWithKeys/res/drawable-hdpi/btn_zoom_down_disabled.9.png
+END
+btn_zoom_down_selected.9.png
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/7/trunk/ZoomerWithKeys/res/drawable-hdpi/btn_zoom_down_selected.9.png
+END
+btn_zoom_down_normal.9.png
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/7/trunk/ZoomerWithKeys/res/drawable-hdpi/btn_zoom_down_normal.9.png
+END
+btn_zoom_up_disabled_focused.9.png
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/7/trunk/ZoomerWithKeys/res/drawable-hdpi/btn_zoom_up_disabled_focused.9.png
+END
+btn_zoom_down_disabled_focused.9.png
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/7/trunk/ZoomerWithKeys/res/drawable-hdpi/btn_zoom_down_disabled_focused.9.png
+END

@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/9/trunk/androidRDPClient/src/net/propero/rdp
+END
+RDPClientChooser.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/RDPClientChooser.java
+END
+RdesktopException.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/RdesktopException.java
+END
+HexDump.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/HexDump.java
+END
+Bitmap.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/9/trunk/androidRDPClient/src/net/propero/rdp/Bitmap.java
+END
+OrderState.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/OrderState.java
+END
+Constants.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/Constants.java
+END
+RdpPacket.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/RdpPacket.java
+END
+CommunicationMonitor.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/CommunicationMonitor.java
+END
+ConnectionException.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/ConnectionException.java
+END
+LicenceStore.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/LicenceStore.java
+END
+MCS.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/MCS.java
+END
+Rdp.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/9/trunk/androidRDPClient/src/net/propero/rdp/Rdp.java
+END
+Secure.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/Secure.java
+END
+Common.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/Common.java
+END
+ISO.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/ISO.java
+END
+PstCache.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/PstCache.java
+END
+OrderException.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/OrderException.java
+END
+Options.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/Options.java
+END
+Licence.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/3/trunk/androidRDPClient/src/net/propero/rdp/Licence.java
+END

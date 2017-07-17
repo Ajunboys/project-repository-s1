@@ -1,0 +1,46 @@
+10
+
+dir
+10
+http://android-rdp-client.googlecode.com/svn/trunk/ZoomerWithKeys/res
+http://android-rdp-client.googlecode.com/svn
+
+
+
+2011-12-12T06:35:55.258235Z
+7
+masterzxg@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0e86b12c-fa20-bc50-f07f-aea1cecfd7af
+
+layout
+dir
+
+values
+dir
+
+drawable
+dir
+
+drawable-hdpi
+dir
+
+drawable-ldpi
+dir
+
+drawable-mdpi
+dir
+

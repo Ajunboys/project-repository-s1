@@ -1,0 +1,43 @@
+10
+
+dir
+10
+http://android-rdp-client.googlecode.com/svn/trunk/androidRDPClient/res
+http://android-rdp-client.googlecode.com/svn
+
+
+
+2011-12-12T06:26:21.603394Z
+3
+masterzxg@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0e86b12c-fa20-bc50-f07f-aea1cecfd7af
+
+values
+dir
+
+drawable-hdpi
+dir
+
+drawable-ldpi
+dir
+
+drawable-mdpi
+dir
+
+layout
+dir
+
