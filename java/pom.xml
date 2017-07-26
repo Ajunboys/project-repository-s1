@@ -1,0 +1,61 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>git.ajunboys.project</groupId>
+    <artifactId>projects-client</artifactId>
+    <packaging>pom</packaging>
+    <version>0.0.1</version>
+    <name>projects-client</name>
+    <url>https://github.com/Ajunboys/project-repository-s1.git</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <modules>
+
+        <!-- java8 web application -->
+        <module>java8</module>
+
+        <!-- project JavaScript API -->
+        <module>project-common-js</module>
+ 
+
+    </modules>
+
+    <build>
+        <plugins>
+
+            <!-- Assembly plugin - for easy distribution -->
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.5.3</version>
+
+                <!-- Build project archive -->
+                <configuration>
+                    <finalName>${project.artifactId}-${project.version}</finalName>
+                    <appendAssemblyId>false</appendAssemblyId>
+                    <tarLongFileMode>gnu</tarLongFileMode>
+                    <descriptors>
+                        <descriptor>project-assembly.xml</descriptor>
+                    </descriptors>
+                </configuration>
+
+                <!-- Bind archive build to package phase -->
+                <executions>
+                    <execution>
+                        <id>make-source-archive</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>
