@@ -16,7 +16,7 @@
     <modules>
 
         <!-- java8 web application -->
-        <module>java8</module>
+        <module>project-java8</module>
 
         <!-- project JavaScript API -->
         <module>project-common-js</module>
