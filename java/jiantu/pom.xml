@@ -2,15 +2,13 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.qyzs.app.liwan</groupId>
-    <artifactId>easy-work-liwan</artifactId>
+    <groupId>com.qyzs.app.jiantu</groupId>
+    <artifactId>easy-work-jiantu</artifactId>
     <packaging>war</packaging>
     <version>1.0.0</version>
-    <name>easy-work-liwan</name>
+    <name>easy-work-jiantu</name>
 
-    <description>
-        The easy-work-liwan web application.
-    </description>
+    <description>The easy-work-jiantu web application.</description>
  
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
