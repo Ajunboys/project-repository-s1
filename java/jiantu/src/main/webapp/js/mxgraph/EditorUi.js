@@ -2723,7 +2723,10 @@ EditorUi.prototype.refresh = function(sizeDidChange)
 		sidebarFooterHeight = Math.max(0, Math.min(h - tmp - bottom, this.sidebarFooterHeight));
 		this.sidebarFooterContainer.style.width = effHsplitPosition + 'px';
 		this.sidebarFooterContainer.style.height = sidebarFooterHeight + 'px';
-		this.sidebarFooterContainer.style.bottom = bottom + 'px';
+		/*this.sidebarFooterContainer.style.bottom = bottom + 'px';*/
+		
+		this.sidebarFooterContainer.style.bottom = '0px';
+		
 	}
 	
 	var fw = (this.format != null) ? this.formatWidth : 0;
@@ -2778,14 +2781,20 @@ EditorUi.prototype.refresh = function(sizeDidChange)
 		
 		if (this.tabContainer != null)
 		{
-			this.tabContainer.style.bottom = (this.footerHeight + off) + 'px';
+			/*this.tabContainer.style.bottom = (this.footerHeight + off) + 'px';*/
+			this.tabContainer.style.bottom = '0px';
 			this.tabContainer.style.right = this.diagramContainer.style.right;
 			th = this.tabContainer.clientHeight;
 		}
 		
-		this.sidebarContainer.style.bottom = (this.footerHeight + sidebarFooterHeight + off) + 'px';
+		/*this.sidebarContainer.style.bottom = (this.footerHeight + sidebarFooterHeight + off) + 'px';
 		this.formatContainer.style.bottom = (this.footerHeight + off) + 'px';
-		this.diagramContainer.style.bottom = (this.footerHeight + off + th) + 'px';
+		this.diagramContainer.style.bottom = (this.footerHeight + off + th) + 'px';*/
+		
+		this.sidebarContainer.style.bottom = '40px';
+		this.formatContainer.style.bottom = '0px';
+		this.diagramContainer.style.bottom = '32px';
+		
 	}
 	
 	if (sizeDidChange)
@@ -2831,6 +2840,10 @@ EditorUi.prototype.createDivs = function()
 	this.footerContainer.style.bottom = '0px';
 	this.footerContainer.style.zIndex = mxPopupMenu.prototype.zIndex - 2;
 	this.hsplit.style.width = this.splitSize + 'px';
+	
+	//hidden footerContainer
+	this.footerContainer.style.visibility = 'hidden';
+	this.footerContainer.style.display = 'none';
 	
 	// Only vertical scrollbars, no background in format sidebar
 	this.formatContainer.style.backgroundColor = 'whiteSmoke';

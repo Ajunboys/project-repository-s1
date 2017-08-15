@@ -38,7 +38,8 @@ window.DRAWIO_LOG_URL = window.DRAWIO_LOG_URL || '';
 window.mxLoadResources = window.mxLoadResources || false;
 window.mxLanguage = window.mxLanguage || (function() 
 {
-	var lang = (urlParams['offline'] == '1') ? 'en' : urlParams['lang'];
+	
+	var lang = (urlParams['offline'] == '1') ? 'zh' : urlParams['lang'];
 	
 	// Known issue: No JSON object at this point in quirks in IE8
 	if (lang == null && typeof(JSON) != 'undefined')
@@ -71,7 +72,9 @@ window.mxLanguage = window.mxLanguage || (function()
 // in the menu defintion in Diagramly.js.
 window.mxLanguageMap = window.mxLanguageMap ||
 {
-	'i18n': '',
+	/*'i18n': '',*/
+	'zh' : '中文（简体）',
+	'zh-tw' : '中文（繁体）',
 	'id' : 'Bahasa Indonesia',
 	'ms' : 'Bahasa Melayu',
 	'bs' : 'Bosanski',
@@ -105,9 +108,7 @@ window.mxLanguageMap = window.mxLanguageMap ||
 	'ar' : 'العربية',
 	'th' : 'ไทย',
 	'ko' : '한국어',
-	'ja' : '日本語',
-	'zh' : '中文（中国）',
-	'zh-tw' : '中文（台灣）'
+	'ja' : '日本語'
 };
 
 if (typeof window.mxBasePath === 'undefined')
@@ -122,9 +123,9 @@ if (window.mxLanguages == null)
 	// Populates the list of supported special language bundles
 	for (var lang in mxLanguageMap)
 	{
-		// Empty means default (ie. browser language), "en" means English (default for unsupported languages)
-		// Since "en" uses no extension this must not be added to the array of supported language bundles.
-		if (lang != 'en')
+		// Empty means default (ie. browser language), "zh" means chinese (default for unsupported languages)
+		// Since "zh" uses no extension this must not be added to the array of supported language bundles.
+		if (lang != 'zh')
 		{
 			window.mxLanguages.push(lang);
 		}

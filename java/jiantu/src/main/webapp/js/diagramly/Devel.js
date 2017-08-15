@@ -13,16 +13,16 @@ mxscript(drawDevUrl + 'js/deflate/base64.js');
 mxscript(drawDevUrl + 'js/sanitizer/sanitizer.min.js');
 
 // Uses grapheditor from devhost
-mxscript(geBasePath +'/Editor.js');
-mxscript(geBasePath +'/EditorUi.js');
-mxscript(geBasePath +'/Sidebar.js');
-mxscript(geBasePath +'/Graph.js');
-mxscript(geBasePath +'/Shapes.js');
-mxscript(geBasePath +'/Actions.js');
-mxscript(geBasePath +'/Menus.js');
-mxscript(geBasePath +'/Format.js');
-mxscript(geBasePath +'/Toolbar.js');
-mxscript(geBasePath +'/Dialogs.js');
+mxscript(geBasePath + 'Editor.js');
+mxscript(geBasePath + 'EditorUi.js');
+mxscript(geBasePath + 'Sidebar.js');
+mxscript(geBasePath + 'Graph.js');
+mxscript(geBasePath + 'Shapes.js');
+mxscript(geBasePath + 'Actions.js');
+mxscript(geBasePath + 'Menus.js');
+mxscript(geBasePath + 'Format.js');
+mxscript(geBasePath + 'Toolbar.js');
+mxscript(geBasePath + 'Dialogs.js');
 
 // Loads main classes
 mxscript(drawDevUrl + 'js/diagramly/sidebar/Sidebar.js');

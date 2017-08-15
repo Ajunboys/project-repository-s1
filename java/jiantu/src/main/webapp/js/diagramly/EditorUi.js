@@ -2307,7 +2307,7 @@
 		div.style.position = 'absolute';
 		div.style.overflow = 'hidden';
 		div.style.borderWidth = '3px';
-
+		
 		var elt2 = document.createElement('a');
 		elt2.setAttribute('href', 'javascript:void(0);');
 		elt2.className = 'geTitle';
